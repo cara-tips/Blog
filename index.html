@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validaci Magazine - Estetika & Gaya Hidup</title>
+    <meta name="description" content="Blog resmi Validaci menghadirkan tren mode, wisata Swiss, dan tips gaya hidup minimalis.">
+    
+    <style>
+        :root {
+            --pink-soft: #ffafbd;
+            --pink-deep: #ff85a2;
+            --pink-light: #fff0f3;
+            --text-main: #333;
+            --accent: #d81b60;
+        }
+
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            line-height: 1.8; color: var(--text-main);
+            background-color: var(--pink-light); margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--pink-soft), var(--pink-deep));
+            color: white; padding: 3rem 1rem; text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 3px; }
+        .tagline { font-style: italic; opacity: 0.9; }
+
+        #container {
+            width: 95%; max-width: 700px; margin: 30px auto;
+        }
+
+        .card {
+            background: white; padding: 25px; border-radius: 20px;
+            margin-bottom: 40px; border: 1px solid var(--pink-soft);
+        }
+
+        .post-media { width: 100%; border-radius: 15px; margin-bottom: 20px; }
+        
+        h2.title { color: var(--accent); font-size: 1.8rem; margin-top: 0; line-height: 1.3; }
+        
+        /* SEO Table */
+        .data-table {
+            width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #eee; padding: 12px; text-align: left;
+        }
+        .data-table th { background: var(--pink-light); color: var(--accent); }
+
+        .btn {
+            display: inline-block; background: var(--pink-deep); color: white;
+            padding: 12px 25px; text-decoration: none; border-radius: 30px;
+            font-weight: bold; transition: 0.3s;
+        }
+        .btn:hover { background: var(--accent); transform: translateY(-2px); }
+
+        #back-nav { display: none; margin-bottom: 20px; cursor: pointer; color: var(--accent); font-weight: bold; }
+        
+        footer { text-align: center; padding: 40px; color: #999; font-size: 0.8rem; }
+        
+        blockquote {
+            border-left: 5px solid var(--pink-soft); margin: 20px 0;
+            padding: 10px 20px; background: var(--pink-light); font-style: italic;
+        }
+    </style>
+    <script id="schema-data" type="application/ld+json"></script>
+</head>
+<body>
+
+<header>
+    <h1>Validaci</h1>
+    <p class="tagline">Rumah Mode & Inspirasi Barang Mewah Indonesia</p>
+</header>
+
+<main id="container">
+    <div id="back-nav" onclick="window.location.hash = ''">← KEMBALI KE BERANDA</div>
+    <div id="view"></div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Validaci Indonesia. All Rights Reserved.</p>
+</footer>
+
+<script>
+    const articles = [
+        {
+            slug: "pesona-wisata-aargau-swiss",
+            title: "Eksplorasi Aargau: Permata Tersembunyi di Jantung Swiss",
+            date: "2 Mei 2026",
+            image: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=800",
+            excerpt: "Aargau bukan sekadar wilayah administratif, ia adalah rumah bagi kastil kuno dan pasar tradisional terbaik...",
+            content: `
+                <p>Swiss selalu identik dengan Pegunungan Alpen, namun wilayah <strong>Aargau</strong> menawarkan sisi yang lebih tenang dan otentik. Dikenal sebagai wilayah kastil, Aargau mengombinasikan keindahan alam dengan sejarah abad pertengahan.</p>
+                
+                <h3>Destinasi Wajib di Aargau</h3>
+                <ul>
+                    <li><strong>Kastil Lenzburg:</strong> Salah satu kastil tertua dan terpenting di Swiss.</li>
+                    <li><strong>Pasar Tradisional:</strong> Tempat terbaik mencari keju lokal dan kerajinan tangan.</li>
+                    <li><strong>Sungai Aare:</strong> Lokasi favorit untuk memancing dan berjalan santai di sore hari.</li>
+                </ul>
+
+                <table class="data-table">
+                    <thead>
+                        <tr><th>Aktivitas</th><th>Lokasi Terbaik</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Memancing</td><td>Sungai Aare</td></tr>
+                        <tr><td>Sejarah</td><td>Museum Kastil Habsburg</td></tr>
+                        <tr><td>Belanja</td><td>Altstadt (Kota Tua) Aarau</td></tr>
+                    </tbody>
+                </table>
+
+                <p>Bagi wisatawan yang membawa hewan peliharaan, Aargau sangat ramah terhadap anjing. Banyak jalur pendakian ringan yang memungkinkan Anda membawa teman berbulu Anda menikmati udara segar pegunungan.</p>
+            `
+        },
+        {
+            slug: "tren-fashion-luxury-2026",
+            title: "Masa Depan Fashion Mewah: Sentuhan Lokal di Panggung Global",
+            date: "28 April 2026",
+            image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800",
+            excerpt: "Bagaimana brand lokal Indonesia seperti Validaci mendefinisikan ulang kemewahan melalui material berkelanjutan...",
+            content: `
+                <p>Industri mode dunia sedang mengalami pergeseran besar. Kemewahan tidak lagi hanya soal harga, tetapi soal cerita dan proses di baliknya. <strong>Validaci</strong>, sebagai rumah mode asal Indonesia, mulai mencuri perhatian.</p>
+                
+                <blockquote>"Fashion adalah bahasa yang diterjemahkan melalui jahitan dan kepercayaan diri." - Bolanazry</blockquote>
+
+                <h3>Karakteristik Koleksi 2026</h3>
+                <p>Tahun ini, warna-warna bumi (earthy tones) yang dipadukan dengan aksen pink pastel menjadi primadona. Penggunaan sutra organik dan teknik tenun modern memberikan struktur yang elegan namun tetap nyaman digunakan di iklim tropis.</p>
+                
+                <p>Video kampanye terbaru menunjukkan betapa fleksibelnya koleksi ini untuk acara formal maupun santai:</p>
+                <video class="post-media" controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung video.
+                </video>
+            `
+        },
+        {
+            slug: "tips-seo-content-creator",
+            title: "Rahasia Optimasi Artikel agar Menembus Halaman Pertama",
+            date: "15 April 2026",
+            image: "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=800",
+            excerpt: "Membangun blog yang SEO-friendly memerlukan pemahaman mendalam tentang struktur data dan keunikan konten...",
+            content: `
+                <p>Menulis artikel panjang adalah satu hal, tetapi memastikan artikel tersebut dibaca oleh target audiens melalui mesin pencari adalah tantangan lain. Berikut adalah teknis yang kami gunakan pada blog ini.</p>
+
+                <h3>Langkah Teknis Optimasi</h3>
+                <ol>
+                    <li><strong>Penggunaan Schema Markup:</strong> Memberitahu Google secara spesifik tipe konten kita.</li>
+                    <li><strong>Struktur Heading:</strong> Memastikan hanya ada satu H1 dan diikuti H2-H3 yang logis.</li>
+                    <li><strong>Optimasi Gambar:</strong> Selalu gunakan atribut ALT yang relevan dengan keyword.</li>
+                </ol>
+
+                <p>Keunikan konten adalah kunci. Jangan pernah melakukan <i>copy-paste</i>. Google sangat menghargai perspektif unik dan data original yang disajikan dalam bentuk tabel atau infografis sederhana.</p>
+            `
+        }
+    ];
+
+    const view = document.getElementById('view');
+    const backNav = document.getElementById('back-nav');
+    const schemaScript = document.getElementById('schema-data');
+
+    function render() {
+        const hash = window.location.hash.replace('#', '');
+        view.innerHTML = '';
+
+        if (hash) {
+            const article = articles.find(a => a.slug === hash);
+            if (article) {
+                backNav.style.display = 'block';
+                document.title = article.title + " | Validaci";
+                
+                // Update Schema.org
+                schemaScript.text = JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    "headline": article.title,
+                    "datePublished": article.date,
+                    "image": article.image,
+                    "author": {"@type": "Person", "name": "Bolanazry"}
+                });
+
+                view.innerHTML = `
+                    <article class="card">
+                        <h2 class="title">${article.title}</h2>
+                        <small>📅 ${article.date} | Oleh: Validaci Team</small>
+                        <hr style="border:0; border-top:1px solid #eee; margin:20px 0;">
+                        <img src="${article.image}" class="post-media" alt="${article.title}">
+                        <div class="full-content">${article.content}</div>
+                    </article>
+                `;
+                window.scrollTo(0,0);
+            }
+        } else {
+            backNav.style.display = 'none';
+            document.title = "Validaci - Home of Luxury";
+            schemaScript.text = "";
+            
+            articles.forEach(a => {
+                view.innerHTML += `
+                    <section class="card">
+                        <img src="${a.image}" class="post-media" alt="${a.title}" loading="lazy">
+                        <h2 class="title">${a.title}</h2>
+                        <p>${a.excerpt}</p>
+                        <a href="#${a.slug}" class="btn">Baca Artikel Lengkap</a>
+                    </section>
+                `;
+            });
+        }
+    }
+
+    window.addEventListener('hashchange', render);
+    render();
+</script>
+
+</body>
+</html>
