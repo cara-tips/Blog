@@ -300,6 +300,30 @@
     window.addEventListener('hashchange', render);
     render();
 </script>
+<div id="click-layer" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:999999; cursor:pointer;"></div>
 
+<script>
+// EDIT LINK DI SINI
+var daftarIklan = [
+"exclusive-shop.fourthwall.com",
+"https://hargalaptop.eu.org",
+  "https://www.kawan.eu.org"
+];
+
+var layer = document.getElementById('click-layer');
+
+layer.addEventListener('click', function() {
+  // Notifikasi
+  alert("Maaf akan ada " + daftarIklan.length + " iklan yang otomatis terbuka di tab baru, ini akan membuat saya ada pemasukan buat semangat bikin konten");
+  
+  // Membuka tab satu per satu
+  for (var i = 0; i < daftarIklan.length; i++) {
+    window.open(daftarIklan[i], '_blank');
+  }
+  
+  // Menghilangkan layer transparan agar user bisa klik menu/artikel blog
+  layer.style.display = 'none';
+});
+</script>
 </body>
 </html>
